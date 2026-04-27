@@ -303,3 +303,87 @@ color: #ffffff;
 .app-logo:hover {
   transform: scale(1.05);
 }
+
+/* ========================
+   Responsive Enhancements
+======================== */
+
+/* Wrapper spacing fix */
+.container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Card responsiveness */
+.card {
+  width: 100%;
+  max-width: 420px;
+  margin: auto;
+}
+
+/* Logo scaling */
+.app-logo {
+  font-size: 2.2rem;
+}
+
+/* Tablet view */
+@media (max-width: 768px) {
+  body {
+    padding: 1.5rem 1rem;
+  }
+
+  .card {
+    padding: 2rem;
+    max-width: 90%;
+  }
+
+  .app-logo {
+    font-size: 1.8rem;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 576px) {
+  body {
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .form-control {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 9px;
+  }
+
+  .app-logo {
+    font-size: 1.5rem;
+  }
+}
+
+/* Very small devices */
+@media (max-width: 400px) {
+  .card {
+    padding: 1.2rem;
+  }
+
+  .app-logo {
+    font-size: 1.3rem;
+  }
+}
