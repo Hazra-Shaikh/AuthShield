@@ -1,0 +1,305 @@
+/* ========================
+   Global Styles
+======================== */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #6366f1 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  margin: 0;
+  padding: 1rem;
+  overflow: auto;
+}
+
+/* ========================
+   Glassmorphic Card
+======================== */
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 45px rgba(0, 0, 0, 0.5);
+}
+
+/* ========================
+   Headings
+======================== */
+h3,p {
+  color: #ffffff;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.5rem;
+}
+
+/* ========================
+   Form Styles
+======================== */
+.form-label {
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.form-control {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  color: #ffffff;
+  padding: 10px 14px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: #14b8a6;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.2);
+}
+
+/* ========================
+   Buttons
+======================== */
+.btn {
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.btn-success {
+  background: linear-gradient(90deg, #14b8a6, #6366f1);
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.4);
+}
+
+.btn-success:hover {
+  background: linear-gradient(90deg, #0d9488, #4f46e5);
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.5);
+}
+
+/* ========================
+   Response Message
+======================== */
+#response {
+  margin-top: 1rem;
+  font-weight: 500;
+  text-align: center;
+  color: #e0e1dd;
+}
+
+.text-danger {
+  color: #f87171 !important;
+}
+
+.text-success {
+  color: #4ade80 !important;
+}
+
+/* ========================
+   Links
+======================== */
+a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  text-align: center;
+  width: 100%;
+}
+
+a:hover {
+  color: #14b8a6;
+  text-decoration: underline;
+}
+
+/* ========================
+   Small Touches
+======================== */
+.card input::placeholder {
+  color: #cbd5e1;
+}
+
+button:focus {
+  outline: none !important;
+}
+
+
+/* ========================
+   Responsive Fixes
+======================== */
+
+/* Small devices (phones) */
+@media (max-width: 576px) {
+  body {
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+
+  h3, p {
+    font-size: 0.95rem;
+  }
+
+  .form-control {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .btn {
+    font-size: 0.95rem;
+    padding: 9px;
+  }
+}
+
+/* Medium devices (tablets) */
+@media (max-width: 768px) {
+  .card {
+    max-width: 90%;
+  }
+}
+
+/* Large screens (extra polish) */
+@media (min-width: 992px) {
+  .card {
+    max-width: 420px;
+  }
+}
+
+.card {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* OTP Input Styling */
+input[name="otp"] {
+  letter-spacing: 6px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* ========================
+   Success Message Styling
+======================== */
+
+.mb-3{
+color: #ffffff;
+
+}
+
+.success-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid rgba(34, 197, 94, 0.4);
+  color: #4ade80;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 500;
+  margin-top: 1rem;
+  text-align: center;
+  backdrop-filter: blur(6px);
+}
+
+.success-icon {
+  font-size: 1.2rem;
+}
+
+.success-text {
+  font-size: 0.95rem;
+}
+
+/* Responsive tweak */
+@media (max-width: 576px) {
+  .success-box {
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.9rem;
+  }
+}
+
+/* ========================
+   Error Message Styling
+======================== */
+.error-box {
+  margin-top: 1rem;
+  padding: 10px;
+  border-radius: 10px;
+  background:#d42e2e; 
+  border: 1px solid rgba(93, 37, 37, 0.4);
+  color: #f3eded;
+  text-align: center;
+  font-weight: 500;
+  backdrop-filter: blur(6px);
+}
+
+/* Error fade out animation */
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Wrapper to align logo + card together */
+.main-wrapper {
+  width: 100%;
+  max-width: 420px;
+}
+
+.app-logo {
+  color: #bebfe3;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+
+  background: linear-gradient(90deg, #68d2ff, #ebe7f5, #22c55e);
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent ;                
+  -webkit-text-fill-color: transparent;
+
+  display: block;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+.app-logo:hover {
+  transform: scale(1.05);
+}
